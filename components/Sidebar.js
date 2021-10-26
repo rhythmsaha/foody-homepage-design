@@ -10,7 +10,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 
 const Sidebar = () => {
     return (
-        <div className="w-72 min-w-[288px] bg-white border-r border-gray-200">
+        <div className="w-72 min-w-[288px] bg-white border-r border-gray-200 hidden xl:block">
             <div className="sticky top-0 pt-8">
                 <div className="flex items-center space-x-3 mb-10 ml-10">
                     <span className="">

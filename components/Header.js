@@ -9,8 +9,8 @@ const Header = () => {
     };
 
     return (
-        <header className="w-full h-36 flex justify-between items-center sticky top-0 mb-4">
-            <div className="ml-16">
+        <header className="w-full flex flex-col-reverse justify-between items-center gap-8 md:flex-row mb-8">
+            <div className="ml-16 mt-10">
                 <h1 className="text-5xl font-semibold">Explore</h1>
 
                 <div className="text-md text-gray-500 mt-2 tracking-wide">
@@ -21,7 +21,7 @@ const Header = () => {
             <div className="h-full pt-10 space-x-1 mr-10">
                 <div className="flex items-center space-x-3">
                     <form
-                        className="flex bg-white items-center px-4 py-2.5 w-96 rounded-3xl space-x-3 shadow-sm"
+                        className="bg-white items-center px-4 py-2.5 w-96 rounded-3xl space-x-3 shadow-sm flex"
                         onSubmit={onSearchHandler}
                     >
                         <span>
@@ -36,7 +36,7 @@ const Header = () => {
                         </button>
                     </form>
 
-                    <div className="flex items-center space-x-4">
+                    <div className="hidden sm:flex items-center space-x-4">
                         <button className="bg-purple-600 text-white rounded-full p-3">
                             <FiShoppingCart className="text-lg" />
                         </button>
