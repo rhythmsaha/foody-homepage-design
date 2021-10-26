@@ -41,27 +41,138 @@ export default function Home({ restaurants, foods }) {
 }
 
 export async function getStaticProps(context) {
-    try {
-        const responseData = await fetch(`${process.env.API_URL}/restaurants`);
-        if (!responseData.ok) throw new Error("Failed");
-        const data = await responseData.json();
+    return {
+        props: {
+            restaurants: [
+                {
+                    id: "res_1",
+                    name: "Stragan",
+                    logo: "/images/restaurant-logo/stragan.png",
+                    rating: 4.8,
+                    distance: 4.3,
+                    offer: "Free Delivery",
+                    deliveryFree: true,
+                },
+                {
+                    id: "res_2",
+                    name: "McDonald's",
+                    logo: "/images/restaurant-logo/mcdonalds.png",
+                    rating: 4.8,
+                    distance: 4.3,
+                    offer: "Free Delivery",
+                    deliveryFree: true,
+                },
+                {
+                    id: "res_3",
+                    name: "Pizza Hut",
+                    logo: "/images/restaurant-logo/pizzahut.png",
+                    rating: 4.8,
+                    distance: 4.3,
+                    offer: "Buy 2 Get 1 Free",
+                    deliveryFree: false,
+                },
+                {
+                    id: "res_4",
+                    name: "Burger King",
+                    logo: "/images/restaurant-logo/burger-king.png",
+                    rating: 4.8,
+                    distance: 4.3,
+                    offer: "Free Delivery",
+                    deliveryFree: true,
+                },
+                {
+                    id: "res_5",
+                    name: "Domino's Pizza",
+                    logo: "/images/restaurant-logo/dominoz.png",
+                    rating: 4.8,
+                    distance: 4.3,
+                    offer: "Buy 1 Get 1 Free",
+                    deliveryFree: false,
+                },
 
-        const responseFoods = await fetch(`${process.env.API_URL}/foods`);
-        if (!responseFoods.ok) throw new Error("Failed");
-        const foods = await responseFoods.json();
+                {
+                    id: "res_6",
+                    name: "Tostitos",
+                    logo: "/images/restaurant-logo/tostitos.jpg",
+                    rating: 4.8,
+                    distance: 4.3,
+                    offer: "Free Delivery",
+                    deliveryFree: true,
+                },
+            ],
 
-        return {
-            props: {
-                restaurants: data,
-                foods: foods,
-            },
-        };
-    } catch (error) {
-        return {
-            props: {
-                restaurants: [],
-                foods: [],
-            },
-        };
-    }
+            foods: [
+                {
+                    id: "food_1",
+                    title: "chicken burger",
+                    price: 80.0,
+                    rating: 4.3,
+                    image: "/images/chicken_burger.jpg",
+                },
+                {
+                    id: "food_2",
+                    title: "chicken deluxe fry",
+                    price: 150.0,
+                    rating: 4.3,
+                    image: "/images/chicken_deluxe_fry.jpg",
+                },
+                {
+                    id: "food_3",
+                    title: "chicken malai gravy",
+                    price: 200.0,
+                    rating: 4.3,
+                    image: "/images/chicken_malai_gravy.jpg",
+                },
+                {
+                    id: "food_4",
+                    title: "chicken pizza",
+                    price: 400.0,
+                    rating: 4.3,
+                    image: "/images/chicken_pizza.jpg",
+                },
+                {
+                    id: "food_5",
+                    title: "chicken sate",
+                    price: 100.0,
+                    rating: 4.3,
+                    image: "/images/chicken_sate.jpg",
+                },
+                {
+                    id: "food_6",
+                    title: "fried rice",
+                    price: 150.0,
+                    rating: 4.3,
+                    image: "/images/fried_rice.jpg",
+                },
+                {
+                    id: "food_7",
+                    title: "nachos galore",
+                    price: 120.0,
+                    rating: 4.3,
+                    image: "/images/nachos_galore.jpg",
+                },
+                {
+                    id: "food_8",
+                    title: "pasta",
+                    price: 120.0,
+                    rating: 4.3,
+                    image: "/images/pasta.jpg",
+                },
+                {
+                    id: "food_9",
+                    title: "ramen",
+                    price: 80.0,
+                    rating: 4.3,
+                    image: "/images/ramen.jpg",
+                },
+                {
+                    id: "food_10",
+                    title: "noodles",
+                    price: 70.0,
+                    rating: 4.3,
+                    image: "/images/noodles.jpg",
+                },
+            ],
+        },
+    };
 }
