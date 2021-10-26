@@ -1,0 +1,7 @@
+body {
+    font-family: "Poppins";
+}
+
+.main-height {
+    min-height: calc(100vh - 80px);
+}

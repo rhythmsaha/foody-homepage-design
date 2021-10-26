@@ -1,40 +1,30 @@
 import Head from "next/head";
+import { BiChevronDown } from "react-icons/bi";
+import NearbyResaurant from "../components/NearbyResaurant";
 
 export default function Home() {
-    const fetchData = () => {
-        fetch(
-            "https://tasty.p.rapidapi.com/recipes/auto-complete?prefix=chicken%20soup",
-            {
-                method: "GET",
-                headers: {
-                    "x-rapidapi-host": "tasty.p.rapidapi.com",
-                    "x-rapidapi-key":
-                        "546e56f53cmsh36e46f941042d99p1774e0jsn948e2824c2ad",
-                },
-            }
-        )
-            .then((response) => {
-                console.log(response);
-            })
-            .catch((err) => {
-                console.error(err);
-            });
-    };
-
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen py-2">
+        <>
             <Head>
                 <title>Create Next App</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <h1 className="text-6xl font-bold">
-                Welcome to{" "}
-                <a className="text-blue-600" href="https://nextjs.org">
-                    Next.js!
-                </a>
-            </h1>
-            <button onClick={fetchData}>Click Me</button>
-        </div>
+            <div className="mx-10 flex space-x-5">
+                <div className="bg-white w-full rounded-lg shadow-sm">
+                    <div className="flex justify-between items-center py-10 px-8">
+                        <h2 className="text-xl font-semibold">Popular Food</h2>
+                        <div className="flex items-center space-x-1 text-sm bg-gray-100 rounded-lg px-2.5 py-2">
+                            <span>This week</span>
+                            <span>
+                                <BiChevronDown className="text-xl" />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <NearbyResaurant />
+            </div>
+        </>
     );
 }
