@@ -11,9 +11,9 @@ export default function Home({ restaurants, foods }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="mx-10 flex space-x-5">
-                <div className="bg-white w-full rounded-xl shadow-sm my-10">
-                    <div className="flex justify-between items-center py-10 px-8">
+            <div className="flex w-11/12 mx-auto space-x-5 my-10">
+                <div className="bg-white w-full rounded-xl shadow-sm my-10 pb-10">
+                    <div className="flex justify-between items-center w-11/12 mt-10 mb-8 mx-auto">
                         <h2 className="text-xl font-semibold">Popular Food</h2>
                         <div className="flex items-center space-x-1 text-sm bg-gray-100 rounded-lg px-2.5 py-2">
                             <span>This week</span>
@@ -23,7 +23,7 @@ export default function Home({ restaurants, foods }) {
                         </div>
                     </div>
 
-                    <div className="mx-10 mb-10">
+                    <div className="w-11/12 mx-auto">
                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-16">
                             {foods.map((food) => (
                                 <FoodItem key={food.id} f={food} />

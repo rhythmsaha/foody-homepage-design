@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const FoodItem = ({ f }) => {
     return (
-        <div className="w-80">
+        <div className="">
             <div className="relative h-48 w-full overflow-hidden rounded-xl">
                 <Image
                     src={f.image}
