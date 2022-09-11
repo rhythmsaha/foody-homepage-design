@@ -1,5 +1,6 @@
 ## Foody - Landing Page
-A static landing page for a food ordering website. Built with [NextJS](https://nextjs.org/) & [TailwindCSS](https://tailwindcss.com/). It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+A static landing page for a food ordering website. Built with [NextJS](https://nextjs.org/) & [TailwindCSS](https://tailwindcss.com/).
+It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
 
 ## Preview
 You can see the site is live [here](https://foody-nextjs.vercel.app/)
